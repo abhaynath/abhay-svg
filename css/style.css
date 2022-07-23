@@ -1,0 +1,62 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 100%; */
+  font-family: "robotoregular";
+  background-color: rgb(216, 216, 216);
+}
+.rb {
+  font-family: "robotobold";
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+}
+#header {
+  padding: 5px;
+  /* background-color: black; */
+}
+#searchbox {
+  padding: 5px;
+}
+#gallery {
+  /* flex-grow: 1; */
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+#gallery .group-title{
+    background-color: white;
+    color:black;
+    font-family: "robotobold"; 
+    text-align: center;
+    text-transform: capitalize;
+}
+#gallery .roll{
+     display: flex;
+    flex-wrap: wrap; 
+}
+#gallery .card {
+  margin: 2px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  /* border-radius: 10px; */
+}
+.card .svg-container {
+  min-width: 150px;
+  flex-grow: 1;
+}
+.svg-container object {
+}
+.card .svg-info {
+  text-align: center;
+  /* font-family: "robotobold"; */
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
