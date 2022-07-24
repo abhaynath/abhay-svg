@@ -4,6 +4,7 @@ class Data {
       title: "Dragon",
       group: "animals",
       path: "animals/dragon1.svg",
+      edit:"dragon1/dragon1.html"
     },
     {
       title: "Revolver 1",
