@@ -16,6 +16,12 @@ class Data {
       group: "weapons",
       path: "weapons/revolver2.svg",
     },
+    {
+      title: "Spartan",
+      group: "Logo",
+      path: "logos/spartan1.svg",
+      edit:"spartan1/spartan1-edit.html"
+    }
   ];
   constructor() {}
   static getImages(searchText = "") {
