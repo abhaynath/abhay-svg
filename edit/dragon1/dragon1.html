@@ -5,39 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dragon Edit</title>
-    <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-      }
-      #container {
-        display: flex;
-        justify-content: space-between;
-        background-color: gray;
-      }
-      #container svg {
-        width: 480px;
-      }
-      .sel {
-        stroke: white;
-        stroke-width: 1;
-        cursor: pointer;
-        filter: drop-shadow(0px 0px 5px rgb(255, 0, 0));
-      }
-    </style>
+    <link rel="stylesheet" href="../../css/editor.css" />
   </head>
   <body>
     <div id="container">
       <div id="toolbar">
-      <!--   <table>
+        <!--   <table>
           <tr><td><label for="fillColor"> Fill Color</td><td><input id="fillColor" type="color" /></td><td id="txtFillColor"></td></tr>
           <tr><td><label for="fillOpacity"> Fill Opacity</td><td><input id="fillOpacity" type="range" min="0" max="10" value="10" /></td><td id="txtFillOpacity"></td></tr>
           <tr><td><label for="strokeColor"> Stroke Color</label></td><td><input id="strokeColor" type="color" /></td><td id="txtStrokeColor"></td></tr>
           <tr><td><label for="strokeOpacity"> Stroke Opacity</label></td><td><input id="strokeOpacity" type="range" min="0" max="10" value="10" /></td><td id="txtStrokeOpacity"></td></tr>
           <tr><td><label for="strokeWidth">Stroke Width</label></td><td><input id="strokeWidth" type="range" min="0" max="10" value="1" /></td><td id="txtStrokeWidth"></td></tr>
         </table> -->
-     
       </div>
       <div id="styleeditor"></div>
       <!-- <object data="dragon-edit.svg"></object> -->
@@ -52,7 +31,7 @@
         enable-background="new 0 0 560.3 704.8"
         xml:space="preserve"
       >
-        <g id="wingTopRight" fill="red">
+        <g id="wingTopRight">
           <path
             d="M188.9,177.5c61.5,1,174.8-14.9,280,63.4c-18-24.5-29.2-49.8-33-70.2c-13.8-52.2,70-68.4,114.4-81.9
       C287.4,86.8,188.9,177.5,188.9,177.5z"
@@ -62,25 +41,23 @@
       C216.4,172.2,188.9,177.5,188.9,177.5z"
           />
         </g>
-        <g id="wingTopLeft" fill="green">
+        <g id="wingTopLeft">
           <path
             d="M168.4,185.3l10,22l-51,20.5c0,0,9.8-44.8-41.7-51.5C158.6,41.5,366.9,10,366.9,10s-221.3,106-94,97.3c32.5-2.2,45-3,45-3
       S209.4,136.5,168.4,185.3z"
           />
         </g>
-        <g id="wingPart1" fill="blue">
+        <g id="wingPart1">
           <path d="M435.4,380.9C368.3,277,280.1,191.3,188.9,177.5c63.8,16.1,147.8,106.1,165.5,228.1C354.4,405.6,362.7,328.2,435.4,380.9z" />
         </g>
         <g id="Layer_5">
           <path
             id="wingPart2"
-            fill="navy"
             d="M188.9,177.5c37.1,11.1,69.9,45.1,69.9,104.1c0,36.3-6.6,65.9-45.1,98.3c-29,24.4-43,42.7-43,42.7s30.4-20.7,29.8,17.3
       c31.1-15,50.9,5.9,60.9,10.7c7-16.3,14-131.3,14-131.3s18.7,39-0.7,128c48-59.7,70.8,0,70.8,0S329.7,214.3,188.9,177.5z"
           />
           <path
             id="head"
-            fill="orange"
             d="M243.1,318c0,0-1.6-24-26.5-38.5c7-1.6,19.5,0.5,19.5,0.5s-11.6-14.6-35.5-23.9c7.5-2.1,23.3-1.8,23.3-1.8
       s-14-13.3-38-14.5c6.3-9.8,42.8-19.2,42.8-19.2s-30.3-10.2-59.5,5.3c2.5-3.8,3-7,24-16.5c-22.4,3.5-57,22-80.8,36
       c-23.8,14-20.4,25.3-21.3,31.8c-4.2,5.2-34,28.5-33,4.8C39.6,310,70.6,328,70.6,328c45.3-54.1,49.8,8.1,18.3,10.3
@@ -92,13 +69,12 @@
         <g id="Layer_6">
           <path
             id="flame1"
-            fill="red"
             d="M22.4,364.3c0.1-2.1,0.9-26.3,23.1-23.7c42.2,4.9,34.2-27.4,54.2-26.5c-14.2,6.6-17.7,30.3-25.1,35.4
       C62.6,357.8,36.7,350.7,22.4,364.3z"
           />
-          <path id="flame2" fill="orange" d="M10,397.5c2.3-6.8-9.2-27.1,42.2-36.1c-1,12.4-20.9,15.7-25.9,18.1C24.4,380.3,17.1,383.4,10,397.5z" />
+          <path id="flame2" d="M10,397.5c2.3-6.8-9.2-27.1,42.2-36.1c-1,12.4-20.9,15.7-25.9,18.1C24.4,380.3,17.1,383.4,10,397.5z" />
         </g>
-        <g id="stripes" fill="green">
+        <g id="stripes">
           <path d="M100.4,461.4c3.6,18,12,30.9,12,30.9s-22.1-19.3-32.1-37.5C86,457.5,93.5,460.5,100.4,461.4z" />
           <path
             d="M99.7,434.1c-1.1,6.9-1.1,13.7-0.4,20c-7.2-1.5-16.3-5.5-23.2-9.4c-2.2-7.5-3.7-17.1-2.6-27.5
@@ -121,16 +97,14 @@
       C161.8,335.7,166.3,341.7,171.7,344.9z"
           />
           <path d="M175.1,338.8c-4.2-2.5-8.4-8.2-10.9-12.4c13.8-14.1,13.2-23.1,13.2-23.1C182.3,314.4,181.5,326.1,175.1,338.8z" />
-          <!-- <path fill="#6b0000" d="M75.4,407L75.4,407c0,0.2-0.1,0.3-0.1,0.4c-0.1-0.2-0.3-0.3-0.4-0.4v0c0-0.1,0.1-0.3,0.1-0.4
-      C75.1,406.7,75.2,406.8,75.4,407z"/> -->
         </g>
-        <g id="tail" fill="orange">
+        <g id="tail">
           <path
             d="M316.1,558.8c11.8,7.3,63.5,56,5.8,136c11.5-40.5-12.3-65-12.3-65s19.3,12,22.5,24.5c7.5-46.3-27.4-75.4-27.4-75.4
       S313.6,564.3,316.1,558.8z"
           />
         </g>
-        <g id="back" fill="red">
+        <g id="back">
           <path
             d="M172,293.5c0,0,44.6,26.3-15.9,77.3s-61.5,78.8-39.4,119.5c9.2,16.9,32.8,32.3,105,24c37.7-4.3,76.7,33.7,19.2,63.5
       c-44.2,22.9-87.3-26.6-24.3-26.9c18.7-0.1,29.9,0.7,35.8,4.4c2.6,1.7,6.3-0.9,7.3-10c1.2-10.5-2.5-13.6-14.2-16.9

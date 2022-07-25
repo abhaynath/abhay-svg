@@ -1,43 +1,47 @@
 class StyleEditor {
+  #prevSelected = null;
+  #selectedObj = null;
+  #svgIds = [];
   #controls = [
     {
       type: "color",
       id: "fillColor",
       label: "Fill Color",
+      property: "fill",
     },
     {
       type: "range",
       id: "fillOpacity",
       label: "Fill Opacity",
+      property: "fillOpacity",
+      compute: (d) => d / 10,
     },
     {
       type: "color",
       id: "strokeColor",
       label: "Stroke Color",
+      property: "stroke",
     },
     {
       type: "range",
       id: "strokeOpacity",
       label: "Stroke Opacity",
+      property: "strokeOpacity",
+      compute: (d) => d / 10,
     },
     {
       type: "range",
       id: "strokeWidth",
       label: "Stroke Width",
+      property: "strokeWidth",
     },
   ];
   constructor(containerId, idList) {
+    this.#svgIds = idList;
     this.#createUI(containerId);
   }
   #createUI(containerId) {
-    const str = `<table>
-    <tr><td><label for="fillColor"> Fill Color</td><td><input id="fillColor" type="color" /></td><td id="txtFillColor"></td></tr>
-    <tr><td><label for="fillOpacity"> Fill Opacity</td><td><input id="fillOpacity" type="range" min="0" max="10" value="10" /></td><td id="txtFillOpacity"></td></tr>
-    <tr><td><label for="strokeColor"> Stroke Color</label></td><td><input id="strokeColor" type="color" /></td><td id="txtStrokeColor"></td></tr>
-    <tr><td><label for="strokeOpacity"> Stroke Opacity</label></td><td><input id="strokeOpacity" type="range" min="0" max="10" value="10" /></td><td id="txtStrokeOpacity"></td></tr>
-    <tr><td><label for="strokeWidth">Stroke Width</label></td><td><input id="strokeWidth" type="range" min="0" max="10" value="1" /></td><td id="txtStrokeWidth"></td></tr>
-  </table>`;
-    let str2 = `<table>`;
+    let str2 = `<table class="tblProperty">`;
     this.#controls.forEach((d) => {
       str2 += this.#getControlUI(d);
     });
@@ -46,7 +50,11 @@ class StyleEditor {
     if (container != null) {
       container.innerHTML = str2;
       this.#attachEvents();
+      this.#updateValues();
     }
+  }
+  #getLabelId(id) {
+    return "txt" + id;
   }
   #getControlUI(obj) {
     let str = `<tr>`;
@@ -61,26 +69,85 @@ class StyleEditor {
     if (obj.type == "range") {
       str += `<td><input id="${obj.id}" type="${obj.type}" min="${min}" max="${max}" value="${value}" /></td>`;
     }
-    const txtId = "txt" + obj.id;
+    const txtId = this.#getLabelId(obj.id);
     str += `<td id="${txtId}"></td>`;
 
     str += `</tr>`;
     return str;
   }
   #attachEvents() {
-    console.log("--attach events-");
     this.#controls.forEach((d) => {
-      const id = d.id;
-      const control = document.getElementById(id);
-      console.log(control);
-      control.oninput = ()=>{
-        this.#handleChange(d);
+      const control = document.getElementById(d.id);
+      control.addEventListener("input", () => {
+        this.#inputChangeHandler(d);
+      });
+    });
+    this.#svgIds.forEach((d) => {
+      const item = document.getElementById(d);
+      item.addEventListener("click", () => {
+        this.#clickHandler(item);
+      });
+    });
+  }
+  #clickHandler(item) {
+    if (this.#selectedObj == item) {
+      this.#selectedObj = null;
+      item.classList.remove("sel");
+      return;
+    }
+    this.#prevSelected = this.#selectedObj;
+    this.#selectedObj = item;
+
+    this.#selectedObj.classList.add("sel");
+    this.#updatePanel();
+    this.#updateValues();
+    if (this.#prevSelected != null) {
+      this.#prevSelected.classList.remove("sel");
+    }
+  }
+  #inputChangeHandler(d) {
+    this.#updateValues();
+    if (this.#selectedObj != null) {
+      let val = this.#getValue(d);
+      this.#selectedObj.style[d.property] = val;
+    }
+  }
+  #updateValues() {
+    this.#controls.forEach((d) => {
+      let val = this.#getValue(d);
+      const txtId = this.#getLabelId(d.id);
+      document.getElementById(txtId).innerHTML = val;
+    });
+  }
+  #rgbArrayToHex(rgb) {
+    return `#${rgb.map((v) => v.toString(16).padStart(2, "0")).join("")}`;
+  }
+  #rgbStringToArray(rgb) {
+    return rgb
+      .match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/)
+      .splice(1, 3)
+      .map((v) => Number(v));
+  }
+  #rgbStringToHex(rgb) {
+    return this.#rgbArrayToHex(this.#rgbStringToArray(rgb));
+  }
+  #updatePanel() {
+    this.#controls.forEach((d) => {
+      let propValue = this.#selectedObj.style[d.property];
+      if (propValue != null && propValue.trim() != "") {
+        if (d.type == "color") {
+          propValue = this.#rgbStringToHex(propValue);
+        }
+        document.getElementById(d.id).value = propValue;
       }
     });
   }
-  #handleChange(d){
-    console.log("--handle change");
-    console.log(d);
+  #getValue(d) {
+    let val = document.getElementById(d.id).value;
+    if (d.compute != undefined && d.compute != null) {
+      val = d.compute(val);
+    }
+    return val;
   }
 }
 export { StyleEditor };
