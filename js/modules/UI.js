@@ -11,22 +11,21 @@ class UI {
     });
   }
   updateSearch() {
-  
     const img = Data.getImages(this.#searchBox.value);
-   
-    let str=``;
-    for(let prop in img){
-        str+=`<div><div class="group-title">${prop}</div><div  class="roll">`;
-        const images = img[prop].images;
-        images.forEach((d)=>{
-            const path = "svgs/"+d.path;
-            let edithPath="";
-            let editButton="";
-            if(d.edit!=undefined && d.edit!=null && d.edit.trim()!=""){
-              edithPath = "edit/"+d.edit;
-              editButton=` <a target="_blank" href="${edithPath}"> <i class="fa fa-edit"></i></a>`;
-            }
-            str+=` <div class="card">
+
+    let str = ``;
+    for (let prop in img) {
+      str += `<div><div class="group-title">${prop}</div><div  class="roll">`;
+      const images = img[prop].images;
+      images.forEach((d) => {
+        const path = "svgs/" + d.path;
+        let edithPath = "";
+        let editButton = "";
+        if (d.edit != undefined && d.edit != null && d.edit.trim() != "") {
+          edithPath = "edit/" + d.edit;
+          editButton = ` <a target="_blank" href="${edithPath}"> <i class="fa fa-edit"></i></a>`;
+        }
+        str += ` <div class="card">
             <div class="svg-container">
                 <object data="${path}"></object>
             </div>
@@ -34,16 +33,13 @@ class UI {
               ${editButton}
             </div>
         </div>`;
-        });
-        str+=`</div>`;
+      });
+      str += `</div>`;
 
-        str+=`</div>`;
+      str += `</div>`;
     }
-  
-    this.#gallery.innerHTML = str;
 
-   
+    this.#gallery.innerHTML = str;
   }
- 
 }
 export { UI };
