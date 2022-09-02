@@ -1,6 +1,11 @@
 class Data {
   static #images = [
     {
+      title: "Ganesh 1",
+      group: "god",
+      path: "god/ganesh1.svg"
+    },
+    {
       title: "Dragon",
       group: "animals",
       path: "animals/dragon1.svg",
