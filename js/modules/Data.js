@@ -3,13 +3,18 @@ class Data {
     {
       title: "Ganesh 1",
       group: "god",
-      path: "god/ganesh1.svg"
+      path: "god/ganesh1.svg",
+    },
+    {
+      title: "Ganesh 2",
+      group: "god",
+      path: "god/ganesh2.svg",
     },
     {
       title: "Dragon",
       group: "animals",
       path: "animals/dragon1.svg",
-      edit:"dragon1/dragon1.html"
+      edit: "dragon1/dragon1.html",
     },
     {
       title: "Revolver 1",
@@ -25,8 +30,8 @@ class Data {
       title: "Spartan",
       group: "Logo",
       path: "logos/spartan1.svg",
-      edit:"spartan1/spartan1-edit.html"
-    }
+      edit: "spartan1/spartan1-edit.html",
+    },
   ];
   constructor() {}
   static getImages(searchText = "") {
@@ -42,14 +47,14 @@ class Data {
     let arr = Data.#images;
     for (i = 0, j = arr.length; i < j; i++) {
       curr = arr[i];
-    
+
       if (!(curr.group in map)) {
         map[curr.group] = { group: curr.group, images: [] };
         res.push(map[curr.group]);
       }
       map[curr.group].images.push(curr);
     }
-   
+
     return map;
   }
 }
