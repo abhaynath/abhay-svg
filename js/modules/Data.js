@@ -26,6 +26,16 @@ class Data {
       path: "god/shivray2.svg",
     },
     {
+      title: "Shiva",
+      group: "god",
+      path: "god/shiva1.svg",
+    },
+    {
+      title: "Shiva",
+      group: "god",
+      path: "god/shiva3.svg",
+    },
+    {
       title: "Dragon",
       group: "animals",
       path: "animals/dragon1.svg",
