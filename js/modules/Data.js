@@ -11,6 +11,11 @@ class Data {
       path: "god/ganesh2.svg",
     },
     {
+      title: "Ganesh 3",
+      group: "god",
+      path: "god/ganesh3.svg",
+    },
+    {
       title: "Dragon",
       group: "animals",
       path: "animals/dragon1.svg",
