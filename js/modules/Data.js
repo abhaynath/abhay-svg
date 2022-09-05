@@ -21,6 +21,11 @@ class Data {
       path: "god/shivray.svg",
     },
     {
+      title: "Shivaji Maharaj 2",
+      group: "god",
+      path: "god/shivray2.svg",
+    },
+    {
       title: "Dragon",
       group: "animals",
       path: "animals/dragon1.svg",
