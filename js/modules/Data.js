@@ -17,13 +17,33 @@ class Data {
     },
     {
       title: "Shivaji Maharaj",
-      group: "god",
+      group: "shivaji",
       path: "god/shivray.svg",
     },
     {
       title: "Shivaji Maharaj 2",
-      group: "god",
+      group: "shivaji",
       path: "god/shivray2.svg",
+    },
+    {
+      title: "Shivaji Maharaj 3",
+      group: "shivaji",
+      path: "god/shivray3.svg",
+    },
+    {
+      title: "Shivaji Maharaj 4",
+      group: "shivaji",
+      path: "god/shivray4.svg",
+    },
+    {
+      title: "Shivaji Maharaj 5",
+      group: "shivaji",
+      path: "god/shivray5.svg",
+    },
+    {
+      title: "Shivaji Maharaj 6",
+      group: "shivaji",
+      path: "god/shivray6.svg",
     },
     {
       title: "Shiva",
