@@ -56,6 +56,16 @@ class Data {
       path: "god/shivray8.svg",
     },
     {
+      title: "Shivaji Maharaj 9",
+      group: "shivaji",
+      path: "god/shivray9.svg",
+    },
+    {
+      title: "Shivaji Maharaj 11",
+      group: "shivaji",
+      path: "god/shivray11.svg",
+    },
+    {
       title: "Shiva",
       group: "god",
       path: "god/shiva1.svg",
