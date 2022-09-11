@@ -102,6 +102,21 @@ class Data {
       path: "logos/spartan1.svg",
       edit: "spartan1/spartan1-edit.html",
     },
+    {
+      title: "Netaji",
+      group: "Heros",
+      path: "heros/netaji1.svg",
+    },
+    {
+      title: "Netaji",
+      group: "Heros",
+      path: "heros/netaji2.svg",
+    },
+    {
+      title: "Netaji",
+      group: "Heros",
+      path: "heros/netaji3.svg",
+    },
   ];
   constructor() {}
   static getImages(searchText = "") {
