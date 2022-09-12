@@ -133,6 +133,11 @@ class Data {
       path: "mario/bricks3.svg",
     },
     {
+      title: "Bricks 4",
+      group: "Mario",
+      path: "mario/bricks4.svg",
+    },
+    {
       title: "Pipe 1",
       group: "Mario",
       path: "mario/pipe1.svg",
