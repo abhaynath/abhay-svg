@@ -127,6 +127,21 @@ class Data {
       group: "Mario",
       path: "mario/bricks2.svg",
     },
+    {
+      title: "Bricks 3",
+      group: "Mario",
+      path: "mario/bricks3.svg",
+    },
+    {
+      title: "Pipe 1",
+      group: "Mario",
+      path: "mario/pipe1.svg",
+    },
+    {
+      title: "Pipe 2",
+      group: "Mario",
+      path: "mario/pipe2.svg",
+    },
   ];
   constructor() {}
   static getImages(searchText = "") {

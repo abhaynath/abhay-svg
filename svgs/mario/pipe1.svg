@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 203 410" xml:space="preserve">
+    <g>
+        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="15.5" y1="251" x2="188.5" y2="251">
+            <stop offset="0" style="stop-color:#B7F818" />
+            <stop offset="2.479255e-002" style="stop-color:#B5F718" />
+            <stop offset="3.875377e-002" style="stop-color:#ACF317" />
+            <stop offset="5.001948e-002" style="stop-color:#9FED16" />
+            <stop offset="5.985571e-002" style="stop-color:#8BE514" />
+            <stop offset="6.875588e-002" style="stop-color:#71D912" />
+            <stop offset="7.698364e-002" style="stop-color:#52CC0F" />
+            <stop offset="8.453199e-002" style="stop-color:#2DBC0C" />
+            <stop offset="9.139784e-002" style="stop-color:#05AA08" />
+            <stop offset="9.291732e-002" style="stop-color:#09AC08" />
+            <stop offset="0.1081" style="stop-color:#32BE0C" />
+            <stop offset="0.1247" style="stop-color:#56CD0F" />
+            <stop offset="0.1426" style="stop-color:#74DB12" />
+            <stop offset="0.1622" style="stop-color:#8DE514" />
+            <stop offset="0.1841" style="stop-color:#A0EE16" />
+            <stop offset="0.2097" style="stop-color:#ADF417" />
+            <stop offset="0.2424" style="stop-color:#B5F718" />
+            <stop offset="0.3065" style="stop-color:#B7F818" />
+            <stop offset="0.4624" style="stop-color:#B7F818" />
+            <stop offset="0.4634" style="stop-color:#B6F718" />
+            <stop offset="0.5158" style="stop-color:#77DC12" />
+            <stop offset="0.5636" style="stop-color:#46C70E" />
+            <stop offset="0.6053" style="stop-color:#23B70B" />
+            <stop offset="0.6393" style="stop-color:#0DAD09" />
+            <stop offset="0.6613" style="stop-color:#05AA08" />
+            <stop offset="0.6855" style="stop-color:#0BAD09" />
+            <stop offset="0.7187" style="stop-color:#1DB40A" />
+            <stop offset="0.7571" style="stop-color:#3AC10D" />
+            <stop offset="0.7995" style="stop-color:#62D310" />
+            <stop offset="0.8445" style="stop-color:#95E915" />
+            <stop offset="0.871" style="stop-color:#B7F818" />
+        </linearGradient>
+
+        <rect x="15.5" y="94.5" fill="url(#SVGID_1_)" stroke="#000000" stroke-width="5" stroke-miterlimit="10"
+            width="173" height="313" />
+        <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="2.5" y1="49" x2="200.5" y2="49">
+            <stop offset="0" style="stop-color:#B7F818" />
+            <stop offset="2.479255e-002" style="stop-color:#B5F718" />
+            <stop offset="3.875377e-002" style="stop-color:#ACF317" />
+            <stop offset="5.001948e-002" style="stop-color:#9FED16" />
+            <stop offset="5.985571e-002" style="stop-color:#8BE514" />
+            <stop offset="6.875588e-002" style="stop-color:#71D912" />
+            <stop offset="7.698364e-002" style="stop-color:#52CC0F" />
+            <stop offset="8.453199e-002" style="stop-color:#2DBC0C" />
+            <stop offset="9.139784e-002" style="stop-color:#05AA08" />
+            <stop offset="9.291732e-002" style="stop-color:#09AC08" />
+            <stop offset="0.1081" style="stop-color:#32BE0C" />
+            <stop offset="0.1247" style="stop-color:#56CD0F" />
+            <stop offset="0.1426" style="stop-color:#74DB12" />
+            <stop offset="0.1622" style="stop-color:#8DE514" />
+            <stop offset="0.1841" style="stop-color:#A0EE16" />
+            <stop offset="0.2097" style="stop-color:#ADF417" />
+            <stop offset="0.2424" style="stop-color:#B5F718" />
+            <stop offset="0.3065" style="stop-color:#B7F818" />
+            <stop offset="0.4624" style="stop-color:#B7F818" />
+            <stop offset="0.4634" style="stop-color:#B6F718" />
+            <stop offset="0.5158" style="stop-color:#77DC12" />
+            <stop offset="0.5636" style="stop-color:#46C70E" />
+            <stop offset="0.6053" style="stop-color:#23B70B" />
+            <stop offset="0.6393" style="stop-color:#0DAD09" />
+            <stop offset="0.6613" style="stop-color:#05AA08" />
+            <stop offset="0.6855" style="stop-color:#0BAD09" />
+            <stop offset="0.7187" style="stop-color:#1DB40A" />
+            <stop offset="0.7571" style="stop-color:#3AC10D" />
+            <stop offset="0.7995" style="stop-color:#62D310" />
+            <stop offset="0.8445" style="stop-color:#95E915" />
+            <stop offset="0.871" style="stop-color:#B7F818" />
+        </linearGradient>
+        <rect x="2.5" y="2.5" fill="url(#SVGID_2_)" stroke="#000000" stroke-width="5" stroke-miterlimit="10" width="198"
+            height="93" />
+        <rect x="15" y="95" width="173" height="14" />
+    </g>
+</svg>
