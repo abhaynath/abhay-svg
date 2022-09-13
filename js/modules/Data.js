@@ -81,6 +81,16 @@ class Data {
       path: "god/shiva4.svg",
     },
     {
+      title: "Krishna",
+      group: "god",
+      path: "god/krishna1.svg",
+    },
+    {
+      title: "Krishna",
+      group: "god",
+      path: "god/krishna2.svg",
+    },
+    {
       title: "Dragon",
       group: "animals",
       path: "animals/dragon1.svg",
@@ -101,6 +111,11 @@ class Data {
       group: "Logo",
       path: "logos/spartan1.svg",
       edit: "spartan1/spartan1-edit.html",
+    },
+    {
+      title: "Spartan",
+      group: "Logo",
+      path: "logos/spartan2.svg",
     },
     {
       title: "Netaji",
