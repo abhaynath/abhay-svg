@@ -162,6 +162,26 @@ class Data {
       group: "Mario",
       path: "mario/pipe2.svg",
     },
+    {
+      title: "Batman",
+      group: "Batman",
+      path: "batman/logo1.svg",
+    },
+    {
+      title: "Batman",
+      group: "Batman",
+      path: "batman/logo2.svg",
+    },
+    {
+      title: "Batman",
+      group: "Batman",
+      path: "batman/logo3.svg",
+    },
+    {
+      title: "Batman",
+      group: "Batman",
+      path: "batman/logo4.svg",
+    },
   ];
   constructor() {}
   static getImages(searchText = "") {
