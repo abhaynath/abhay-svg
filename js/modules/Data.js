@@ -186,6 +186,11 @@ class Data {
       title: "Batman",
       group: "Batman",
       path: "batman/logo5.svg",
+    },
+    {
+      title: "Batman",
+      group: "Batman",
+      path: "batman/logo6.svg",
     }
   ];
   constructor() {}
