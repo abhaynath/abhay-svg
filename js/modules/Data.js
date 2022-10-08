@@ -182,6 +182,11 @@ class Data {
       group: "Batman",
       path: "batman/logo4.svg",
     },
+    {
+      title: "Batman",
+      group: "Batman",
+      path: "batman/logo5.svg",
+    }
   ];
   constructor() {}
   static getImages(searchText = "") {
